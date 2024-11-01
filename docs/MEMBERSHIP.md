@@ -16,6 +16,6 @@ To become a Yorkie member, you must meet the following requirements:
 To become a Yorkie member, follow these steps:
 
 1. Fork the Yorkie community repository
-2. Add your GitHub username to the member list in [`members.yaml`](./teams/members.yaml) using the correct format
+2. Add your GitHub username to the member list in [`members.yaml`](../teams/members.yaml) using the correct format
 3. Create a Pull Request following our PR template and fill in the required information
 4. Wait for the maintainers to review your application
