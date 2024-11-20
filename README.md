@@ -24,11 +24,11 @@ Check our [membership guidelines](./docs/MEMBERSHIP.md) to learn how to become a
 
 ## Community Meetings
 
-We host weekly and monthly sync meetings to discuss the project's progress, share updates, and plan future work.
+We host biweekly and monthly sync meetings to discuss the project's progress, share updates, and plan future work.
 
 Meeting schedules are as follows:
 
 - Monthly: Last Saturday at 8:00 PM (KST)
-- Weekly: Every Saturday at 5:00 PM (KST) (during [OSSCA](https://www.oss.kr/contribution_academy) program)
+- Biweekly: Every Other Saturday at 8:30 PM (KST)
 
 Check our [CodePair community workspace](https://codepair.yorkie.dev/community) to view notes from our community meetings.
