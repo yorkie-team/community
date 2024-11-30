@@ -8,7 +8,8 @@ Members are expected to actively participate in the community and contribute to 
 
 To become a Yorkie member, you must meet the following requirements:
 
-- Has pushed at least 1 commit (PR) to one of the Yorkie repositories within the last 6 months
+- Has pushed at least 1 commit (PR) to one of the Yorkie repositories within the last 6 months (for developers)
+- Has contributed at least 1 design asset, UI/UX design, or design-related improvement to Yorkie project within the last 6 months (for designers)
 - Be a member of the [Yorkie Discord Server](https://discord.com/invite/MVEAwz9sBy)
 
 ## Becoming a member
