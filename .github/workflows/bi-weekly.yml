@@ -1,0 +1,36 @@
+name: Bi-weekly notification
+
+on:
+  schedule:
+    - cron: "0 9 * * 3" # Every Wednesday at 9:00 UTC (KST 18:00)
+  workflow_dispatch:
+
+jobs:
+  send-discord-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if it's an even ISO week and get Saturday date
+        id: week-check
+        run: |
+          WEEK_NUMBER=$(date +'%V')
+          if [ $((WEEK_NUMBER % 2)) -ne 0; then
+            echo "This is an odd week, skipping the message."
+            exit 0
+          fi
+          echo "This is an even week, sending the message."
+          SATURDAY_DATE=$(date -d 'next Saturday' +'%d/%m/%y')
+          echo "::set-output name=saturday_date::$SATURDAY_DATE"
+
+      - name: Discord notification
+        if: steps.week-check.outcome == 'success'
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
+        with:
+          args: |
+            [Bi-weekly Sync 수요조사 공지]
+
+            이번주 Bi-weekly Sync 수요조사 공지입니다.
+            참여하실 분들은 🚀 이모지 남겨주세요!
+
+            - 일시: ${{ steps.week-check.outputs.saturday_date }} 20:30 (🧋-cafe 채널)
