@@ -13,12 +13,12 @@ jobs:
         id: week-check
         run: |
           WEEK_NUMBER=$(date +'%V')
-          if [ $((WEEK_NUMBER % 2)) -ne 0; then
+          if [ $((10#$WEEK_NUMBER % 2)) -ne 0 ]; then
             echo "This is an odd week, skipping the message."
             exit 0
           fi
           echo "This is an even week, sending the message."
-          SATURDAY_DATE=$(date -d 'next Saturday' +'%d/%m/%y')
+          SATURDAY_DATE=$(date -d 'saturday' +'%d/%m/%y')
           echo "::set-output name=saturday_date::$SATURDAY_DATE"
 
       - name: Discord notification
