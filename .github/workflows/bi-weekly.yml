@@ -34,4 +34,3 @@ jobs:
             참여하실 분들은 🚀 이모지 남겨주세요!
 
             - 일시: ${{ steps.week-check.outputs.saturday_date }} 20:30 (🧋-cafe 채널)
-            - CodePair 문서: TBD
