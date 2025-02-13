@@ -13,16 +13,19 @@ jobs:
         id: week-check
         run: |
           WEEK_NUMBER=$(date +'%V')
-          if [ $((10#$WEEK_NUMBER % 2)) -ne 0 ]; then
+          IS_EVEN_WEEK=$((10#$WEEK_NUMBER % 2 == 0 ? 1 : 0))
+
+          if [ "$IS_EVEN_WEEK" -eq 1 ]; then
+            SATURDAY_DATE=$(date -d 'saturday' +'%d/%m/%y')
+            echo "::set-output name=saturday_date::$SATURDAY_DATE"
+            echo "This is an even week, sending the message."
+          else
             echo "This is an odd week, skipping the message."
-            exit 0
           fi
-          echo "This is an even week, sending the message."
-          SATURDAY_DATE=$(date -d 'saturday' +'%d/%m/%y')
-          echo "::set-output name=saturday_date::$SATURDAY_DATE"
+          echo "::set-output name=is_even_week::$IS_EVEN_WEEK"
 
       - name: Discord notification
-        if: steps.week-check.outcome == 'success'
+        if: steps.week-check.outputs.is_even_week == '1'
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@0.3.2
