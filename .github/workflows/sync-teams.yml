@@ -1,0 +1,32 @@
+name: Sync GitHub Teams
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'teams/**'
+  workflow_dispatch:
+
+jobs:
+  sync-teams:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install PyYAML requests
+
+      - name: Sync teams
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python .github/scripts/sync.py
