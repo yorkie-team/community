@@ -1,0 +1,40 @@
+[submodule "projects/yorkie"]
+	path = projects/yorkie
+	url = git@github.com:yorkie-team/yorkie.git
+	branch = main
+	ignore = dirty
+[submodule "projects/yorkie-js-sdk"]
+	path = projects/yorkie-js-sdk
+	url = git@github.com:yorkie-team/yorkie-js-sdk.git
+	branch = main
+	ignore = dirty
+[submodule "projects/yorkie-team.github.io"]
+	path = projects/yorkie-team.github.io
+	url = git@github.com:yorkie-team/yorkie-team.github.io.git
+	branch = main
+	ignore = dirty
+[submodule "projects/dashboard"]
+	path = projects/dashboard
+	url = git@github.com:yorkie-team/dashboard.git
+	branch = main
+	ignore = dirty
+[submodule "projects/codepair"]
+	path = projects/codepair
+	url = git@github.com:yorkie-team/codepair.git
+	branch = main
+	ignore = dirty
+[submodule "projects/syncup"]
+	path = projects/syncup
+	url = git@github.com:yorkie-team/syncup.git
+	branch = main
+	ignore = dirty
+[submodule "projects/wafflebase"]
+	path = projects/wafflebase
+	url = git@github.com:wafflebase/wafflebase.git
+	branch = main
+	ignore = dirty
+[submodule "projects/yorkie-rust-sdk"]
+	path = projects/yorkie-rust-sdk
+	url = git@github.com:yorkie-team/yorkie-rust-sdk.git
+	branch = main
+	ignore = dirty
