@@ -8,6 +8,8 @@ A curated list for Yorkie Project
 - [Yorkie JS SDK](https://github.com/yorkie-team/yorkie-js-sdk)
 - [Yorkie Android SDK](https://github.com/yorkie-team/yorkie-android-sdk)
 - [Yorkie iOS SDK](https://github.com/yorkie-team/yorkie-ios-sdk)
+- [Yorkie Rust SDK](https://github.com/yorkie-team/yorkie-rust-sdk)
+- [Yorkie Dashboard](https://github.com/yorkie-team/dashboard)
 
 ## Tools
 
@@ -17,6 +19,8 @@ A curated list for Yorkie Project
 ## Use Cases
 
 - [CodePair](https://codepair.yorkie.dev)
+- [SyncUp](https://syncup.yorkie.dev)
+- [Wafflebase](https://wafflebase.io)
 
 ## Related Papers
 
